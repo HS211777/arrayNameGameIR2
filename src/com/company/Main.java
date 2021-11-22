@@ -16,7 +16,7 @@ public class Main {
             playerGo(inputInt());
             System.out.println("Computers turn");
             aiGo();
-            checkEnd();
+            end = checkEnd(length);
         }
     }
     public static int createArray(int length){
@@ -55,6 +55,16 @@ public class Main {
         }
     }
     public static boolean checkEnd(int length){
-        for
+        boolean end = true;
+        for(int i = 0; i < length;i++){
+            if (names.get(i).equalsIgnoreCase("")){
+                end = false;
+            }
+        }
+        return end;
+    }
+    public static boolean checkWinner(){
+        boolean playerwin = false;
+        //check who won
     }
 }
